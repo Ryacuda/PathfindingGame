@@ -14,6 +14,8 @@ public class GraphRenderer : MonoBehaviour
     {
         graph = Graph.CreateTestGraph();
 
+        graph.AddNode(new List<float> { 10, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity }
+                      new List<float>);
 
         int n = graph.nodes.Count;
         float rayon = 5 * n / (2 * Mathf.PI);
