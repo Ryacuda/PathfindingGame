@@ -3,29 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 using UnityEngine.Rendering;
+using Unity.VisualScripting;
+
 
 public class GraphRenderer : MonoBehaviour
 {
-    private Graph graph;
+    private Graph<string> graph;
     [SerializeField] private GameObject node_prefab;
 
     // Start is called before the first frame update
     void Start()
     {
-        graph = Graph.CreateTestGraph();
+        graph = Graph<string>.CreateTestGraph();
 
-        graph.AddNode(new List<float> { 10, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity }
-                      new List<float>);
+        graph.AddNode(new List<float> { 10, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity },
+                      new List<float> { float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity },
+                      "ahah");
 
         int n = graph.nodes.Count;
-        float rayon = 5 * n / (2 * Mathf.PI);
+        float rayon = 3 * n / (2 * Mathf.PI);
         float angle = 2.0f * Mathf.PI / (float) n;
 
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
             Vector2 p = rayon * new Vector2(Mathf.Cos(i * angle), Mathf.Sin(i * angle));
             GameObject go = Instantiate(node_prefab, new Vector3(p.x, p.y, 0), Quaternion.identity);
-            go.GetComponent<Node>().n = i;
+            Variables.Object(go).Set("id", graph.nodes[i].id);
         }
 
         for(int i = 0; i < graph.connections.Count; i++)

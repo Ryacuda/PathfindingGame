@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7418572200779518739}
   - component: {fileID: 9109502983115550571}
-  - component: {fileID: 3333156713345971793}
+  - component: {fileID: -8851983124678125134}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3333156713345971793
+--- !u!114 &-8851983124678125134
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6010177061892495215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15400c4c829a9534682bc41e73ddf2c1, type: 3}
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  n: 0
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[{"name":"id","value":{"$content":0,"$type":"System.Int32"},"typeHandle":{"Identification":"System.Int32,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089","$version":"A"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
