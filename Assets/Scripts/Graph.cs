@@ -11,7 +11,7 @@ public class Graph<T>
 	public List<GraphNode<T>> nodes;                    // node identifiers
 
 	// Constructors
-	private Graph()
+	public Graph()
 	{
 		nodes = new List<GraphNode<T>>();
 	}
