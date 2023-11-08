@@ -5,11 +5,11 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
-public class GraphNode<T>
+public class GraphNode<T> : MonoBehaviour
 {
 	public int id;
 	public T node_data;
-	private List<GraphNode<T>> adjacency_list;       // neighbours
+	private List<GraphNode<T>> adjacency_list;      // neighbours
 	private List<float> costs_list;					// cost associated with neighbours
 	
 	// Constructor
@@ -28,5 +28,7 @@ public class GraphNode<T>
 		adjacency_list.Add(node);
 		costs_list.Add(cost);
 	}
+
+
 }
 
