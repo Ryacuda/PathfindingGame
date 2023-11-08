@@ -39,4 +39,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 945087039948059419f117474346e998, type: 2}
   - {fileID: 11400000, guid: 0add1ee52b7b6ca40acb2bc7736135c1, type: 2}
   - {fileID: 11400000, guid: 0deb288ea21b83e4f9d99f4c6095d528, type: 2}
-  walking_speed: 0
+  - {fileID: 11400000, guid: 1529b96ac0e78b44c99f77610f7b2480, type: 2}
+  - {fileID: 11400000, guid: fb9ed801a4e66e24ebe7f253e52ef177, type: 2}
+  - {fileID: 11400000, guid: 41420d6b526461645aa629aee41f012d, type: 2}
+  walking_speed: 1

@@ -12,5 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8bca32612f50db47abeca8ad393b562, type: 3}
   m_Name: Bush TileData
   m_EditorClassIdentifier: 
-  tiles: []
-  walking_speed: 0
+  tiles:
+  - {fileID: 11400000, guid: e5edf2686295cfe4ca859110266fc9af, type: 2}
+  - {fileID: 11400000, guid: 925c7e47abbdf814fa3fc0911d83cd0e, type: 2}
+  - {fileID: 11400000, guid: dca020220bf1019449a9efb54f18457e, type: 2}
+  - {fileID: 11400000, guid: a9cf42902b105b1418055382fbd02fa9, type: 2}
+  - {fileID: 11400000, guid: d7dc18e952f2cf24284657a83c4520f8, type: 2}
+  - {fileID: 11400000, guid: 8ac31ccdaea725540991077d242aeecc, type: 2}
+  - {fileID: 11400000, guid: 711879ecefe6e2548b647563ec18346a, type: 2}
+  walking_speed: 2
