@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8bca32612f50db47abeca8ad393b562, type: 3}
+  m_Name: Grass TileData
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 7e15f06e42ef7cc4690e0124ecd38d89, type: 2}
+  - {fileID: 11400000, guid: 2f0c7ad5047b8004587c3233351154c5, type: 2}
+  - {fileID: 11400000, guid: 2a72abd2c6fad6b419167a1801fd4aa3, type: 2}
+  - {fileID: 11400000, guid: c7688333a49732343ac9e52e97b810f0, type: 2}
+  - {fileID: 11400000, guid: 1ff58c1fd1fe07e43b43f0e41af91858, type: 2}
+  - {fileID: 11400000, guid: cd0116dae75d4ab488534ab39c67d27b, type: 2}
+  - {fileID: 11400000, guid: 80bd2d67b1a945d408d5630421f83750, type: 2}
+  - {fileID: 11400000, guid: 1988224f800934b43b8f5fdd3c82ba30, type: 2}
+  - {fileID: 11400000, guid: 6095a6691cbb197448613c08560cba34, type: 2}
+  - {fileID: 11400000, guid: 0dbb0f5bb3726af499152bad3f5c73db, type: 2}
+  - {fileID: 11400000, guid: b919f24c69f64bd46a01e600279b2e55, type: 2}
+  - {fileID: 11400000, guid: 6c51821eb318f1f4a98a9efad57b9c02, type: 2}
+  - {fileID: 11400000, guid: 82712f6529fb3ff4796423b562f5479b, type: 2}
+  - {fileID: 11400000, guid: f9ce0677f030f6449ad052812d08b5be, type: 2}
+  - {fileID: 11400000, guid: 6158adcdac4674e478a1ced998c68821, type: 2}
+  - {fileID: 11400000, guid: 67ec23307b94ee640a08b5ccb222f216, type: 2}
+  - {fileID: 11400000, guid: 9fac47f81534ffc4d96134cd52653c3f, type: 2}
+  - {fileID: 11400000, guid: 330ea0ce53bb7c641bcdd06b1b9802a2, type: 2}
+  - {fileID: 11400000, guid: 03bbec7e5c82698448e14a48e72d480f, type: 2}
+  - {fileID: 11400000, guid: e729adb7073e1084ab8aa263493971b0, type: 2}
+  - {fileID: 11400000, guid: e6c5277feb7fbb249943cb5fbb5b46fa, type: 2}
+  - {fileID: 11400000, guid: 6a609d67e3087f84fb7dffb6676756c8, type: 2}
+  - {fileID: 11400000, guid: 87241caa69b77594097e2cf435adc3b1, type: 2}
+  - {fileID: 11400000, guid: 945087039948059419f117474346e998, type: 2}
+  - {fileID: 11400000, guid: 0add1ee52b7b6ca40acb2bc7736135c1, type: 2}
+  - {fileID: 11400000, guid: 0deb288ea21b83e4f9d99f4c6095d528, type: 2}
+  walking_speed: 0
