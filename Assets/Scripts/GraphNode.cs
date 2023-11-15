@@ -2,26 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GraphNode : MonoBehaviour
+public class GraphNode
 {
-	// Attributes
-	public List<GraphNode> nodes;      // Connections
-	public Vector2 position;
+	public List<GraphNode> neighbours;
+	public float speed_multiplier;
+	public Vector3Int position;
 
-	// Start is called before the first frame update
-	void Start()
+	public GraphNode()
 	{
-		
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-		
-	}
-
-	public void OnDrawGizmos()
-	{
-		Gizmos.DrawSphere(position, 0.3f);
+		neighbours = new List<GraphNode>();
+		speed_multiplier = 0;
 	}
 }
