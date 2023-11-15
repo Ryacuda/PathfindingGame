@@ -35,4 +35,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 61d31d6e8eb34f74c8ff46260a9cbae1, type: 2}
   - {fileID: 11400000, guid: 3d98659cbcf48ba47b9a23bce27d712e, type: 2}
   - {fileID: 11400000, guid: 65d61b9bc1d8bfe4aba82561b1907e71, type: 2}
+  - {fileID: 11400000, guid: af23b603b2a4b444bb313c314ff82e25, type: 2}
+  - {fileID: 11400000, guid: 0a49c98208bfe46468baff208ec40a19, type: 2}
+  - {fileID: 11400000, guid: 75b29884f8c7c2e4a833b8deac72bcf5, type: 2}
+  - {fileID: 11400000, guid: acd257d1f2dc74b469ebb3fd1582d0c6, type: 2}
+  - {fileID: 11400000, guid: 1c4335f614d80394a8dc4d1be1ca5ee6, type: 2}
+  - {fileID: 11400000, guid: 5ff9900023902d0478d39c1b4be92650, type: 2}
+  - {fileID: 11400000, guid: c1538e2c177061044989a3e332e5f159, type: 2}
+  - {fileID: 11400000, guid: 94f129b3147129f4085f593b7d26a04f, type: 2}
+  - {fileID: 11400000, guid: 7a563c5031a785d45b4ff8a1f876038d, type: 2}
+  - {fileID: 11400000, guid: 0198e40ec5c55224891187a211ef4a43, type: 2}
+  - {fileID: 11400000, guid: de2fa71739346054493742d89885ed7d, type: 2}
+  - {fileID: 11400000, guid: 4f33d700a565fbf42948c34b74ef94fb, type: 2}
+  - {fileID: 11400000, guid: 6c2229e61254d1a45a764374b9bef945, type: 2}
+  - {fileID: 11400000, guid: 5cb49985b43db9f41b7ebe929b4cc554, type: 2}
   walking_speed: 10000

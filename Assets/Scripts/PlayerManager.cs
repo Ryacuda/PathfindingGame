@@ -34,11 +34,12 @@ public class PlayerManager : MonoBehaviour
         {
 			y = 0;
         }
-
-		if(!is_moving && (x != 0 || y != 0))
+		
+		if(mapmanager_instance.GetWalkingSpeed(transform.position + new Vector3(x, y, 0)) != 0
+           && !is_moving && (x != 0 || y != 0))
 		{
-			StartCoroutine(MovePlayer(new Vector3(x,y, 0)));
-		}
+            StartCoroutine(MovePlayer(new Vector3(x, y, 0)));
+        }
 	}
 
 	IEnumerator MovePlayer(Vector3 movement)
