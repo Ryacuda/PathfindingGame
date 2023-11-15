@@ -12,5 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8bca32612f50db47abeca8ad393b562, type: 3}
   m_Name: Wall TileData
   m_EditorClassIdentifier: 
-  tiles: []
+  tiles:
+  - {fileID: 11400000, guid: c009dc9b2d4cf8241a7e13b1b00380aa, type: 2}
+  - {fileID: 11400000, guid: 5ee78d06c765fbd408e466bd22770aa0, type: 2}
+  - {fileID: 11400000, guid: 5cd6dbfb2e36c0f43852d6def99d7ce1, type: 2}
+  - {fileID: 11400000, guid: 118562206677bae48b245967e830c6c0, type: 2}
+  - {fileID: 11400000, guid: d6d18276bb829534f95badaa7c191659, type: 2}
+  - {fileID: 11400000, guid: 8ecf11b4ae7b07c48b5d6b04fd39bcae, type: 2}
+  - {fileID: 11400000, guid: d93ca5e6f2b50314882b005d482a1536, type: 2}
+  - {fileID: 11400000, guid: efb54390f8b340a4ea8885ba5d128c35, type: 2}
+  - {fileID: 11400000, guid: 2ef6f24976269e1428ee32f6c3458b4e, type: 2}
+  - {fileID: 11400000, guid: 2c3376068a9e70c458674003c22a1412, type: 2}
+  - {fileID: 11400000, guid: 267de883611a58e42bd70c07b9c72f1d, type: 2}
+  - {fileID: 11400000, guid: c3313eb0309659e438f52afc34b2417c, type: 2}
+  - {fileID: 11400000, guid: 8c5af0a7739df504c9283eec1be1f7b2, type: 2}
+  - {fileID: 11400000, guid: be74131cfc4036040a41e1c7a1be85bd, type: 2}
+  - {fileID: 11400000, guid: 10f98b7006746c945a78d28e79cc1e45, type: 2}
+  - {fileID: 11400000, guid: d4aa210feec5ce04593f6ffc1459bcb3, type: 2}
+  - {fileID: 11400000, guid: 2a109b59eaf1e114aaf2d5d10003d505, type: 2}
+  - {fileID: 11400000, guid: 23d97d6f0f94417488f634e88573b68f, type: 2}
+  - {fileID: 11400000, guid: bbbb4c0373d8dbc4bbd44e5c424b3d06, type: 2}
+  - {fileID: 11400000, guid: 61d31d6e8eb34f74c8ff46260a9cbae1, type: 2}
+  - {fileID: 11400000, guid: 3d98659cbcf48ba47b9a23bce27d712e, type: 2}
+  - {fileID: 11400000, guid: 65d61b9bc1d8bfe4aba82561b1907e71, type: 2}
   walking_speed: 10000
