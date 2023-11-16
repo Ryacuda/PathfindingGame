@@ -6,16 +6,21 @@ public class PlayerManager : MonoBehaviour
 {
 	// Attributes
 	private bool is_moving;
+	public int score;
 	[SerializeField] private float move_time;
 	[SerializeField] private MapManager mapmanager_instance;
-
 	[SerializeField] private float base_movespeed;
+
+	[SerializeField] private GameObject treasure_prefab;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		is_moving = false;
+		score = 0;
 		mapmanager_instance = GameObject.Find("MapManager").GetComponent<MapManager>();
+
+		SpawnTreasure();
 	}
 
 	// Update is called once per frame
@@ -35,7 +40,7 @@ public class PlayerManager : MonoBehaviour
 			y = 0;
         }
 		
-		if(mapmanager_instance.GetWalkingSpeed(transform.position + new Vector3(x, y, 0)) != 0
+		if(mapmanager_instance.GetPlayerCostMultiplier(transform.position + new Vector3(x, y, 0)) != 0
            && !is_moving && (x != 0 || y != 0))
 		{
             StartCoroutine(MovePlayer(new Vector3(x, y, 0)));
@@ -61,8 +66,17 @@ public class PlayerManager : MonoBehaviour
 
 		is_moving = false;
 
-		float time_spent_moving = mapmanager_instance.GetWalkingSpeed(start_position) + mapmanager_instance.GetWalkingSpeed(end_position);
+		float time_spent_moving = mapmanager_instance.GetPlayerCostMultiplier(start_position) + mapmanager_instance.GetPlayerCostMultiplier(end_position);
 		time_spent_moving *= base_movespeed / 2;
 		mapmanager_instance.IncrementAnimalTime(time_spent_moving);		// gives the animals in the scene the same amount of time to move
+	}
+
+	public void SpawnTreasure()
+	{
+		Vector3 p = mapmanager_instance.GetRandomTerrainLocation();
+
+		GameObject go = Instantiate(treasure_prefab, p + new Vector3(0.5f, 0.5f, 0), Quaternion.identity);
+		go.GetComponent<SpriteRenderer>().sortingOrder = 3;
+		go.GetComponent<TreasureManager>().player_instance = gameObject;
 	}
 }

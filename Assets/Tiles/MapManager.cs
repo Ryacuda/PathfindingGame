@@ -9,7 +9,7 @@ public class MapManager : MonoBehaviour
 {
 	[SerializeField] private Tilemap map;
 	[SerializeField] private List<TileData> tileDatas;
-
+	[SerializeField] private TileBase spawn_tile;
 
 	public Dictionary<Vector2Int, GraphNode> graph;
 
@@ -38,17 +38,7 @@ public class MapManager : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetMouseButtonDown(0))
-		{
-			Vector2 p = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			Vector3Int grid_pos = map.WorldToCell(p);
 
-			TileBase tile = map.GetTile(grid_pos);
-
-			float speed = dataFromTiles[tile].walking_speed;
-
-			Debug.Log("At posi " + grid_pos + " you can walk at " + speed + " speed");
-		}
 	}
 
 	private void GenerateGraph()
@@ -61,7 +51,9 @@ public class MapManager : MonoBehaviour
 			if(map.HasTile(localtilepos))
 			{
 				GraphNode node = new GraphNode();
-				node.speed_multiplier = GetWalkingSpeed(new Vector2(localtilepos.x, localtilepos.y));
+
+				node.player_multiplier = GetPlayerCostMultiplier(new Vector2(localtilepos.x, localtilepos.y));
+				node.animal_multiplier = GetAnimalCostMultiplier(new Vector2(localtilepos.x, localtilepos.y));
 				node.position = localtilepos;
 
 				graph[new Vector2Int(localtilepos.x, localtilepos.y)] = node;
@@ -94,14 +86,24 @@ public class MapManager : MonoBehaviour
 		}
 	}
 
-	public float GetWalkingSpeed(Vector3 world_position)
+	public float GetPlayerCostMultiplier(Vector3 world_position)
 	{
 		TileBase tile = map.GetTile(map.WorldToCell(world_position));
 
 		if (tile == null)
 			return 0f;
 
-		return dataFromTiles[tile].walking_speed;
+		return dataFromTiles[tile].player_cost_multiplier;
+	}
+
+	public float GetAnimalCostMultiplier(Vector3 world_position)
+	{
+		TileBase tile = map.GetTile(map.WorldToCell(world_position));
+
+		if (tile == null)
+			return 0f;
+
+		return dataFromTiles[tile].animal_cost_multiplier;
 	}
 
 	public GraphNode GetNode(Vector3 worldpos)
@@ -114,12 +116,36 @@ public class MapManager : MonoBehaviour
 	public void IncrementAnimalTime(float time)
 	{
 		Vector3 playerpos = GameObject.Find("amogus").transform.position;
+
 		foreach (GameObject go in GameObject.FindGameObjectsWithTag("Animal"))
 		{
+			// give time to animals
 			go.GetComponent<AnimalController>().time_available += time;
-			go.GetComponent<AnimalController>().MoveToward(playerpos);
+
+			// decide if the animal goes for the fish or the player (only decide to chase the player if it's close enough)
+			if(Vector3.Distance(playerpos, go.transform.position) < 7f)
+			{	// go toward player
+				go.GetComponent<AnimalController>().DijkstraMoveToward(playerpos);
+			}
+			else
+			{	// go toward fish
+				go.GetComponent<AnimalController>().AStarMoveToward(); 
+			}
+		}
+	}
+
+	public Vector3 GetRandomTerrainLocation()
+	{
+		List<Vector3> possible_coords = new List<Vector3>();
+
+		foreach (Vector3Int localtilepos in map.cellBounds.allPositionsWithin)
+		{
+			if (map.HasTile(localtilepos) && map.GetTile(localtilepos) == spawn_tile)
+			{
+				possible_coords.Add(map.LocalToWorld(localtilepos));
+			}
 		}
 
-		
+		return possible_coords[Random.Range(0, possible_coords.Count-1)];
 	}
 }

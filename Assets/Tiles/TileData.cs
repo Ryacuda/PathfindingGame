@@ -7,5 +7,6 @@ using UnityEngine.Tilemaps;
 public class TileData : ScriptableObject
 {
     public TileBase[] tiles;
-    public float walking_speed;
+    public float player_cost_multiplier;
+    public float animal_cost_multiplier;
 }

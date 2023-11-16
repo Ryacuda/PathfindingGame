@@ -20,4 +20,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d7dc18e952f2cf24284657a83c4520f8, type: 2}
   - {fileID: 11400000, guid: 8ac31ccdaea725540991077d242aeecc, type: 2}
   - {fileID: 11400000, guid: 711879ecefe6e2548b647563ec18346a, type: 2}
-  walking_speed: 10
+  player_cost_multiplier: 1
+  animal_cost_multiplier: 3
